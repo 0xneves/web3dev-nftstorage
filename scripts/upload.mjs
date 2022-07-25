@@ -4,7 +4,7 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 const API_KEY = process.env.NFT_STORAGE
-const totalImages = 1 // Substitua pelo total de imagens
+const totalImages = 1
 
 async function uploadImageToNFTStorage(i) {
   const image = new File(
@@ -16,7 +16,7 @@ async function uploadImageToNFTStorage(i) {
   return cidImage
 }
 
-async function tryToUploadImg(i){
+async function tryToUploadImg(i) {
   console.log("Uploading id:", i)
   try {
     const cidImage = await uploadImageToNFTStorage(i)
